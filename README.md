@@ -13,9 +13,9 @@ C++ Code for Algorithms And Data Strucures Course - AASTMT 2015.
    * [LinkedQueue] - Queue by Linked List.
    * [LinkedStack] - Stack by Linked List.
 * [Binary Search Tree] - 
-*  [Recursion 1] - Factorial Function throw a recursive method.
-*  [Recursion 2] - Fibonacci Function throw a recursive method.
-*  [Recursion 3] - Print From 1 to 100 throw a recursive method.
+  *  [Recursion 1] - Factorial Function throw a recursive method.
+  *  [Recursion 2] - Fibonacci Function throw a recursive method.
+  *  [Recursion 3] - Print From 1 to 100 throw a recursive method.
 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does it's job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
