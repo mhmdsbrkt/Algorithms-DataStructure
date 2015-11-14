@@ -11,7 +11,6 @@ C++ Code for Algorithms And Data Strucures Course - AASTMT 2015.
 * [Linked List] - linked list class and functions.
    * [LinkedStack] - Stack by Linked List.
    * [LinkedQueue] - Queue by Linked List.
-   * [LinkedStack] - Stack by Linked List.
 * [Binary Search Tree] - 
   *  [Recursion 1] - Factorial Function throw a recursive method.
   *  [Recursion 2] - Fibonacci Function throw a recursive method.
