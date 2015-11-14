@@ -30,6 +30,7 @@ C++ Code for Algorithms And Data Strucures Course - AASTMT 2015.
    [Linked List]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/04-LinkedList.cpp>
    [LinkedStack]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/04-LinkedStack.cpp>
    [LinkedQueue]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/05-LinkedQueue.cpp>
+   [BinarySearchTree]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/06-BinarySearchTree.cpp>
    [Recursion 1]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/05-Factorial.cpp>
    [Recursion 2]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/05-fibonacci.cpp>
    [Recursion 3]: <https://github.com/mhmdsbrkt/Algorithms-DataStructure/blob/master/05-Print1to100.cpp>
