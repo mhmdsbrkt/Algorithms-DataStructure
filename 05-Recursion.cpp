@@ -4,15 +4,16 @@ using namespace std;
 int factorial (int);
 
 int main (){
-int n, res;
-cout << "Enter Value Of N";
-cin >> n;
-res = factorial(n);
-cout << "Factorial "<< res << endl;
+    int input, result;
+    cout << "Enter Value Of N ";
+    cin >> input;
+    result = factorial(input);
+    cout << "Factorial of " << input << " = " << result << endl;
+    return 0;
 }
 
-int factorial(int n)
-{
-    if(n==0) return 1;
-    else return n*factorial(n-1);
+int factorial(int input){
+    if(input == 0) return 1;
+    else return input * factorial(input - 1);
+
 }
