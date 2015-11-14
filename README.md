@@ -5,16 +5,17 @@ C++ Code for Algorithms And Data Strucures Course - AASTMT 2015.
 
 * [Search Alogoritms] - Linear and Binary Search.
 * [Stack] - Odd and even stacks.
-* [Stack Assignment] - Dynamic stack for positive and negative Numbers.
+   * [Stack Assignment] - Dynamic stack for positive and negative Numbers.
 * [Queue] - circular Queue.
-* [Queue Assignment] - Dynamic Queue.
+   * [Queue Assignment] - Dynamic Queue.
 * [Linked List] - linked list class and functions.
-* [LinkedStack] - Stack by Linked List.
-* [LinkedQueue] - Queue by Linked List.
-* [LinkedStack] - Stack by Linked List.
-* [Recursion 1] - Factorial Function throw a recursive method.
-* [Recursion 2] - Fibonacci Function throw a recursive method.
-* [Recursion 3] - Print From 1 to 100 throw a recursive method.
+   * [LinkedStack] - Stack by Linked List.
+   * [LinkedQueue] - Queue by Linked List.
+   * [LinkedStack] - Stack by Linked List.
+* [Binary Search Tree] - 
+*  [Recursion 1] - Factorial Function throw a recursive method.
+*  [Recursion 2] - Fibonacci Function throw a recursive method.
+*  [Recursion 3] - Print From 1 to 100 throw a recursive method.
 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does it's job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
