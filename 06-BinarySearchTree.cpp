@@ -2,148 +2,93 @@
 
 using namespace std;
 
-class stack {
-
+class Stack {
 private:
-    int *arr;
-    int size;
-    int top;
-
+    node **arr;
+    int top, size;
 public:
-    //Declare CONSTRICTOR Function with Parameter
-    stack(int cSize) {
+    Stack(int cSize) {
         size = cSize;
         top = 0;
-        arr = new int(size);
+        arr = new node *[size];
     }
 
-    // CONSTRICTOR Overloading to set default Value
-    stack(void) {
-        size = 10;
+    Stack(void) {
+        size = 30;
         top = 0;
-        arr = new int[size];
+        arr = new node *[size];
     }
 
-    // Declare PUSH function
-    void push(int data) {
-        arr[top] = data;
+    bool isfull(void) { return (top == size); }
+
+    bool isempty() { return (top == 0); }
+
+    void push(node *addr) {
+        arr[top] = addr;
         top++;
     }
 
-    // Declare POP function
-    int pop() {
+    node *pop(void) {
         top--;
         return arr[top];
-
     }
 
-    // Declare IS FULL function
-    bool isFull() {
-        // Check if Top = Size Stack is Full
-        if (top >= size) {
-            return true;
-        } else {
-            return false;
-        }
+    node *peak(void) { return arr[top - 1]; }
 
-    }
+    int stack_max_size(void) { return size; }
 
-    // Declare IS EMPTY function
-    bool isEmpty() {
-        // Check if Top = 0 so Stack is Empty
-        if (top <= 0) {
-            return true;
-        } else {
-            return false;
-        }
+    int number_of_elements(void) { return top; }
 
-    }
-
-    // Declare GET TOP Function
-    int getTop() {
-        return top;
-    }
-
-    // Declare Peak Function
-    int peak() {
-        return arr[top];
-    }
-
-    //Declare CLEAR Function
-    void clear() {
-        top = 0;
-    }
+    void clear_stack(void) { top = 0; }
 };
 
 class Queue {
 private:
-    int *pIntQueue;
-    int size;
-    int first;
-    int last;
-    int counter;
-
+    node **arr;
+    int front, rear, size;
 public:
-    // CONSTRUCTOR
-    Queue(int queSize) {
-        size = queSize;
-        first = last = counter = 0;
-        pIntQueue = new int[size];
+    Queue(int cSize) {
+        size = cSize;
+        front = 0;
+        rear = 0;
+        arr = new node *[size];
     }
 
-    // CONSTRUCTOR With default value 10
     Queue(void) {
-        size = 10;
-        first = last = counter = 0;
-        pIntQueue = new int[size];
+        size = 30;
+        front = 0;
+        rear = 0;
+        arr = new node *[size];
     }
 
-    // ENEQUE
-    void enqueue(int data) {
-        counter++;
-        pIntQueue[last] = data;
-        last = (last + 1) % size;
+    bool isfull(void) { return ((rear + 1) % size == front); }
+
+    bool isempty() { return (front == rear); }
+
+    void enque(node *addr) {
+        arr[rear] = addr;
+        rear = (rear + 1) % size;
     }
 
-    // DEQUE
-    int deque(void) {
-        int temp = pIntQueue[first];
-        counter--;
-        first = (first + 1) % size;
-        return temp;
-
+    node *deque(void) {
+        node *t;
+        t = arr[front];
+        front = (front + 1) % size;
+        return t;
     }
 
-    // IS FULL
-    bool isFull(void) {
-        if (counter == size) return true;
-        else return false;
+    node *peak(void) { return arr[front]; }
 
+    int queue_max_size(void) { return size; }
+
+    int number_of_elements(void) { return (rear - front + size) % size; }
+
+    void clear_queue(void) {
+        front = 0;
+        rear = 0;
     }
-
-    // IS Empty
-    bool isEmpty(void) {
-        if (counter == 0) return true;
-        else return false;
-    }
-
-    // GET Counter
-    bool getCount(void) {
-        return counter;
-    }
-
-    // Get Front
-    int getFront(void) {
-        return pIntQueue[first];
-
-    }
-
-    // CLEAR
-    void clear(void) {
-        first = last = counter = 0;
-    }
-
 };
+
 
 struct node {
     node *left;
@@ -206,7 +151,7 @@ void printPreOrder(node *root) {
         cout << "Empty Tree";
         return;
     }
-    stack myStack;
+    Stack myStack;
     myStack.push(root);
     while (!myStack.isEmpty()) {
         root = myStack.pop();
