@@ -1,15 +1,19 @@
-using namespace std;
 #include <iostream>
+using namespace std;
 
-void printNumbers(int n) {
-    if(n > 0) {
-        printNumbers(n - 1);
-      cout << n<<"\t";
+void print(int n) {
+
+    if (n <= 100) {
+        cout << n << endl;
+        print(n + 1);
     }
-    return;
+
 }
 
 int main() {
-    printNumbers(100);
+    int num;
+    cout << "enter the number: ";
+    cin >> num;
+    print(num);
     return 0;
 }
