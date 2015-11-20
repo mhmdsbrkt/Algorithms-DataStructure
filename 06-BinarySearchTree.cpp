@@ -1,6 +1,11 @@
 #include <iostream>
 
 using namespace std;
+struct node {
+    node *left;
+    node *right;
+    int data;
+};
 
 class Stack {
 private:
@@ -19,9 +24,9 @@ public:
         arr = new node *[size];
     }
 
-    bool isfull(void) { return (top == size); }
+    bool isFull(void) { return (top == size); }
 
-    bool isempty() { return (top == 0); }
+    bool isEmpty() { return (top == 0); }
 
     void push(node *addr) {
         arr[top] = addr;
@@ -61,11 +66,11 @@ public:
         arr = new node *[size];
     }
 
-    bool isfull(void) { return ((rear + 1) % size == front); }
+    bool isFull(void) { return ((rear + 1) % size == front); }
 
-    bool isempty() { return (front == rear); }
+    bool isEmpty() { return (front == rear); }
 
-    void enque(node *addr) {
+    void enqueue(node *addr) {
         arr[rear] = addr;
         rear = (rear + 1) % size;
     }
@@ -89,12 +94,6 @@ public:
     }
 };
 
-
-struct node {
-    node *left;
-    node *right;
-    int data;
-};
 
 node *makeNewNode(int data) {
     node *newNode = new node;
@@ -227,6 +226,26 @@ int main() {
     insert(root, 9);
     insert(root, 1);
     insert(root, 2);
+
+    search(root, 3);
+    search(root, 7);
+    search(root, 6);
+
+    cout << "\n Breadth First:\t";
+    printBFS(root);
+    cout << "\n Pre Order: \t";
+    printPreOrder(root);
+    cout << "\n Pre Order2: \t";
+    printPreOrder2(root);
+    cout << "\n In Order2: \t";
+    printInOrder(root);
+    cout << "\n Post Order: \t";
+    printPostOrder(root);
+    cout << "\n Breadth First:\t";
+    printBFS(root);
+    cout << "\n Breadth First:\t";
+    printBFS(root);
+
 
     return 0;
 }
