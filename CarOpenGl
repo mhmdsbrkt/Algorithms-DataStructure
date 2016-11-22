@@ -46,6 +46,7 @@ void setPixel(int xCoordinate, int yCoordinate) {
 
 
 void drawFilledCircle(GLfloat x, GLfloat y, GLfloat radius,GLfloat c1, GLfloat c2, GLfloat c3){
+    
     int i;
     int triangleAmount = 30;                        // No of triangles used to draw circle
     glColor3f(c1, c2, c3);                          // Set Color
@@ -62,6 +63,7 @@ void drawFilledCircle(GLfloat x, GLfloat y, GLfloat radius,GLfloat c1, GLfloat c
 }
 
 void drawPolygon(double c1,double c2, double c3, int x1,int x2,int x3,int x4,int y1,int y2,int y3,int y4){
+    
     glColor3f(c1,c2,c3);                            // set polygonal color
     glPointSize(3.0);                               // set point size to 3
     glBegin(GL_POLYGON);                            //  Set GL drawing method to Polygon
@@ -78,6 +80,7 @@ void drawPolygon(double c1,double c2, double c3, int x1,int x2,int x3,int x4,int
 }
 
 void drawEmptyPolygon(double c1,double c2, double c3, int x1,int x2,int x3,int x4,int y1,int y2,int y3,int y4){
+    
     glColor3f(c1,c2,c3);                         // set polygonal color
     glPointSize(3.0);                            // set point size to 3
     glBegin(GL_LINE_LOOP);                       //  Set GL drawing method to Line Loop
@@ -136,18 +139,16 @@ void display(void) {
     // Clear Buffer
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // draw Circle;
-    
+    // left Cricles
     drawFilledCircle(100, -40, 35,0,0,0);
     drawFilledCircle(100, -40, 23,1,1,1);
     drawFilledCircle(100, -40, 15,0,0,1);
     
+    // Right Cricles
     drawFilledCircle(300, -40, 35,0,0,0);
     drawFilledCircle(300, -40, 23,1,1,1);
     drawFilledCircle(300, -40, 15,0,0,1);
-    
-
-    
+     
     // Body
     drawPolygon(0.0,0.0,0.0,67,380,380,67,-16,-16,50,50);
     
@@ -157,11 +158,9 @@ void display(void) {
     // Glass
     drawEmptyPolygon(0.0,0.0,0.0,140,180,180,140,124,124,50,50);
     drawEmptyPolygon(0.0,0.0,0.0,180,260,260,180,124,124,50,50);
-    drawEmptyPolygon(0.0,0.0,0.0,260,280,280,260,124,124,50,50);
+    drawEmptyPolygon(0.0,0.0,0.0,260,280,280,260,124,124,50,50);   
     
-    
-    // Triangles
-    
+    // left Triangles
     drawPolygon(100,-24,0.0,100,-40);
     drawPolygon(100,-24,45.0,100,-40);
     drawPolygon(100,-24,90.0,100,-40);
@@ -169,46 +168,18 @@ void display(void) {
     drawPolygon(100,-24,180.0,100,-40);
     drawPolygon(100,-24,225.0,100,-40);
     
-    
+    // Right Triangles
     drawPolygon(300,-24,0.0,300,-40);
     drawPolygon(300,-24,45.0,300,-40);
     drawPolygon(300,-24,90.0,300,-40);
     drawPolygon(300,-24,135.0,300,-40);
     drawPolygon(300,-24,180.0,300,-40);
-    drawPolygon(300,-24,225.0,300,-40);
-
-
-
-
-
-
-
-
-    
+    drawPolygon(300,-24,225.0,300,-40);   
     
     glEnd();
     glFlush();
     
 }
-
-void handler(unsigned char key, int x, int y){
-    
-    switch (key){
-        case 'w':
-            glClearColor (1.0, 1.0, 0.0, 0.0);
-            break;
-            
-        case 'r':
-            glClearColor (0.0, 1.0, 0.0, 0.0);
-
-            break;
-            
-        default:
-            break;
-    }
-    glutPostRedisplay(); //request display() call ASAP
-}
-
 
 
 // Main Method
@@ -234,7 +205,6 @@ int main(int argc, char * argv[]) {
     init();
     
     // begain to draw the object
-    glutKeyboardFunc(handler);
     glutDisplayFunc(display);
 
 
